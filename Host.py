@@ -2,6 +2,8 @@ from NetworkEntity import *
 
 class Host(NetworkEntity):
     hostCount = 0
+    # Each host needs a name. This will be easier to identify each host. The name of the\\
+    # host can be define as the section name of the host file - keeping count makes little sense
     def __init__(self, bandwidth, loss, delay, jitter):
         self.bandwidth = bandwidth
         self.loss = loss
