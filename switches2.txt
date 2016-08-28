@@ -1,0 +1,7 @@
+[S1]
+hosts = h1,h2,h3,h4
+bw = 5
+loss = 4
+delay = 5
+jitter = 0
+

@@ -1,0 +1,17 @@
+[h1]
+bw =2
+loss =3
+delay =3
+jitter =4
+
+[h2]
+bw =3
+loss =4
+delay =3
+jitter =2
+
+[h3]
+bw =3
+loss =2
+delay =3
+jitter =4
