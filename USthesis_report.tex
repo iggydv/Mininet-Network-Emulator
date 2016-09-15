@@ -1,0 +1,111 @@
+%==== Document Setup (usthesis)======================================
+
+\documentclass[report, 12pt,oneside,openany,a4paper, a5block a4paper,afrikaans,english]{usthesis}
+\usepackage[hmargin={10mm,10mm},vmargin={20mm,20mm}]{geometry}
+\usepackage{float}
+%
+% PLEASE read the USthesis documentation for the class options
+% and how to set line and paragraph spacing
+%
+
+%==== Language setup ================================================
+ \usepackage[latin1]{inputenc}%................... Recognizes �, �, etc
+ \usepackage{babel}%.............................. Language setup
+
+%==== Math setup ====================================================
+ \usepackage{amsmath}%............................ Advanced math (before fonts)
+ %\usepackage{amssymb}%............................ AMS Symbol fonts
+
+%==== Font setup (default is Computer Modern) =======================
+ \usepackage[T1]{fontenc}%........................ Type 1 fonts
+ \usepackage{textcomp}%........................... Additional text character
+ \usepackage{bm}%................................. Bold math symbols (after fonts)
+
+%==== Ref's, Bib's and Nomencl ======================================
+ \usepackage{usnomencl}%.......................... List of symbols (in usthesis pack)
+ \usepackage{usbib}%.............................. Bibliography    (in usthesis pack)
+    \bibliographystyle{usmeg-a}
+    \renewcommand\bibfont{\small}
+
+    %% For usmeg-a, the bib is a list of references. If you
+    %% are using usmeg-n comment out the following lines
+    \addto{\captionsafrikaans}{\renewcommand{\bibname}{Lys van Verwysings}}
+    \addto{\captionsenglish}{\renewcommand{\bibname}{List of References}}
+
+%==== Graphics and Color ============================================
+\usepackage{graphicx}%........................... Graphicx loaded in usthesis
+\usepackage{color}%.............................. Color setup
+
+%==== Additional USthesis packages ==================================
+
+\usepackage{ussummary}%.......................... Mech Eng summary page (in usthesis pack)
+
+%==== Local Defs ====================================================
+\makeatletter
+
+%
+% Please insert user defined commands here
+% and NOT in the document itself!
+%
+
+\makeatother
+%==== Title Page ====================================================
+
+\title{Mininet Network Emulator}
+
+\author{I.T.\ de Villiers}
+       {Ignatius Thomas de Villiers\\
+           17502292}
+
+\subject{Project (e) 448}
+        {Department Electrical and  Electronic Engineering,\\Stellenbosch University,\\Private Bag X1, Matieland 7602.}
+
+\ReportDescript{Dissertation Report}
+
+\address{Department Electrical and  Electronic Engineering,\\Stellenbosch University,\\Private Bag X1, Matieland 7602.}
+
+\studyleader{Dr H.A.\ Engelbrecht}
+
+\setdate{11}{2016}
+
+
+
+%====================================================================%
+%                 T H E   M A I N   D O C U M E N T                  %
+%====================================================================%
+\begin{document}
+
+\frontmatter%========================================================
+
+\TitlePage
+\CopyrightPage
+\include{verklaring}
+\include{Acknowledgements}
+\include{opsomming}
+\include{uittreksel}
+\tableofcontents
+\listoffigures
+\listoftables
+%\include{nomenkl}
+
+\mainmatter%=========================================================
+
+\numberwithin{equation}{section}%(from amsmath)
+\numberwithin{figure}{section}  %
+\numberwithin{table}{section}   %
+
+ \include{Chp-1}
+%\include{Chp-2}
+%\include{Chp-3}
+
+\appendix%===========================================================
+
+ \include{App-A}
+%\include{App-B}
+%\include{App-C}
+
+\backmatter%=========================================================
+
+\bibliography{USbibsample}
+
+\end{document}
