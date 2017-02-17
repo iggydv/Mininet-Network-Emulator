@@ -1,6 +1,0 @@
-[S1]
-hosts = h1
-bw = 0
-loss = 0
-delay = 0
-
